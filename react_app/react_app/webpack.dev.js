@@ -17,7 +17,8 @@ module.exports = {
     watchContentBase: true,
     progress: true,
     hot: true,
-    historyApiFallback: true, //This will make sure we are able to load the page when doing reload of that page
+    historyApiFallback: true, //This will make sure we are able to load the page when 
+                              //doing reload of that page
   },
 
   module: {

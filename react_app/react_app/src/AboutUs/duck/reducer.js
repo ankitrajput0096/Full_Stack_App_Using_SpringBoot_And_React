@@ -1,6 +1,6 @@
 import * as types from './types';
 
-const initialState = {
+const initialState = {  //initial state of reducer for this component in redux store.
   value: 0,
   receivedAt: null,
   isFetching: false,
@@ -10,8 +10,10 @@ const initialState = {
   deleteApiDataStatus: 'no delete data',
 };
 
+//This function handles operations which needs to be performed 
+//depending on the action Type and payload of the action triggered.
 const IncDecReducer = (state = initialState, action) => {
-  switch (action.type) {
+  switch (action.type) { // 'switch' case based on action type
     case types.INCREMENT:
       return {
         ...state,

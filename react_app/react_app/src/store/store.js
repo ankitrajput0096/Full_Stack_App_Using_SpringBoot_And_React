@@ -1,3 +1,4 @@
+//Creating the redux store for the application
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../rootReducers/rootReducer';
 import thunk from 'redux-thunk';

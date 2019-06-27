@@ -9,6 +9,7 @@ class MyComponent extends Component {
       <div className={"intro"}>Hello World</div>
       <img src={logo} alt="Logo" />
       <div>Awesome!!!</div>
+      {/*This is an navigation link to 'aboutUs' component*/}
       <NavLink to='/about'>Click here to go About us </NavLink>
     </div>
     );

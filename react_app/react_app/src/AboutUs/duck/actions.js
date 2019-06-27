@@ -1,6 +1,7 @@
 import * as types from './types';
 import axios from 'axios';
 import aboutUsUtils from './utils';
+
 const increment = () => dispatch => {
   dispatch({
     type: types.INCREMENT,
@@ -13,7 +14,8 @@ const decrement = () => dispatch => {
   });
 }
 
-const getTodos = () => dispatch => {
+// GET API Example
+const getGETApiData = () => dispatch => {
   const getUrl = 'http://localhost:8080/topics';
   dispatch({ type: types.FETCH });  // with this action object make 'isFetching' true in redux state.
   axios.get(getUrl)
@@ -25,7 +27,7 @@ const getTodos = () => dispatch => {
     .catch(function (error) {
       // handle error
       console.log(error);
-      dispatch({ type: types.GET_API_DATA, payload: []})
+      dispatch({ type: types.GET_API_DATA, payload: []}) // with this action upload empty list as an error occured during endpoint call
     })
     .finally(function () {
       // always executed
@@ -33,6 +35,7 @@ const getTodos = () => dispatch => {
     });
 }
 
+//POST API EXAMPLE
 const postMethodCall = (id, name, desc) => dispatch => {
   const postUrl = 'http://localhost:8080/topics/add';
   dispatch({ type: types.FETCH });  // with this action object make 'isFetching' true in redux state.
@@ -54,6 +57,7 @@ const postMethodCall = (id, name, desc) => dispatch => {
     });
 }
 
+//PUT API EXAMPLE
 const putMethodCall = (id, name, desc) => dispatch => {
   const putUrl = `http://localhost:8080/topics/update/${id}`; // using string literals here
   dispatch({ type: types.FETCH });  // with this action object make 'isFetching' true in redux state.
@@ -75,6 +79,7 @@ const putMethodCall = (id, name, desc) => dispatch => {
     });
 }
 
+//DELETE API EXAMPLE
 const deleteMethodCall = (id) => dispatch => {
   const postUrl = `http://localhost:8080/topics/delete/${id}`; // using string literals here
   dispatch({ type: types.FETCH });  // with this action object make 'isFetching' true in redux state.
@@ -95,6 +100,7 @@ const deleteMethodCall = (id) => dispatch => {
     });
 }
 
+//GET API WITH DELAY EXAMPLE: where loader is shown during api call
 const getGETApiDataWithDelay = () => dispatch => {
   const getUrl = 'http://localhost:8080/topicsWithDelay';
   dispatch({ type: types.FETCH });  // with this action object make 'isFetching' true in redux state.
@@ -115,13 +121,16 @@ const getGETApiDataWithDelay = () => dispatch => {
     });
 }
 
+//Can define more actions related to this component here
+
 //Public actions which are invoked from the application components
 export default {
   increment,
   decrement,
-  getTodos,
+  getGETApiData,
   postMethodCall,
   putMethodCall,
   deleteMethodCall,
   getGETApiDataWithDelay,
+  //Can export more actions related to this component here
 };
