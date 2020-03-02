@@ -59,7 +59,7 @@ Once you have maven and npm installed on your environment, install the project d
 
 ## Running
 
-#### 1) Using terminal go into `react_app` folder and perform these actions to run front-end application:
+#### 1) Using terminal, go into `react_app` folder and perform these actions to run front-end application:
 
 1. Start App in Dev Environment:
 
@@ -78,7 +78,7 @@ Once you have maven and npm installed on your environment, install the project d
 
    Your application should be now running on http://localhost:9100
 
-#### 2) Using terminal go into `springboot_app` folder and perform these actions to run backend application:
+#### 2) Using terminal, go into `springboot_app` folder and perform these actions to run backend application:
 
    Run the application from the `Application.java` main method directly,
    or from a command line:
