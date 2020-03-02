@@ -35,23 +35,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 Once you have maven and npm installed on your environment, install the project dependencies via:
 
-1. Using terminal, go into 'react_app' folder and perform these actions:
+1. Using terminal, go into `react_app` folder and perform these actions:
 
-    Installing dependencies:
+    #### Installing dependencies:
 
     ```
     npm install
     ```
 
-    To Bundle App for Prod Environment:
+    #### To Bundle App for Prod Environment:
 
     ```
     npm run start
     ```
 
-2. Using terminal, go into 'springboot_app' folder and perform these actions:
+2. Using terminal, go into `springboot_app` folder and perform these actions:
 
-    Installing dependencies:
+    #### Installing dependencies:
 
     ```
     mvn install
@@ -59,35 +59,35 @@ Once you have maven and npm installed on your environment, install the project d
 
 ## Running
 
-#### 1) Using terminal go into 'react_app' folder and perform these actions to run front-end application:
+#### 1) Using terminal go into `react_app` folder and perform these actions to run front-end application:
 
 1. Start App in Dev Environment:
 
-```
-npm run dev
-```
+   ```
+   npm run dev
+   ```
 
-Your application should be now running on http://localhost:9000
+   Your application should be now running on http://localhost:9000
 
 
 2. Start App in Prod Environment:
 
-```
-npm run fireTheProd
-```
+   ```
+   npm run fireTheProd
+   ```
 
-Your application should be now running on http://localhost:9100
+   Your application should be now running on http://localhost:9100
 
-#### 2) Using terminal go into 'springboot_app' folder and perform these actions to run backend application:
+#### 2) Using terminal go into `springboot_app` folder and perform these actions to run backend application:
 
-Run the application from the `Application.java` main method directly,
-or from a command line:
+   Run the application from the `Application.java` main method directly,
+   or from a command line:
 
-```
-mvn spring-boot:run
-```
+   ```
+   mvn spring-boot:run
+   ```
 
-Your server should be now running on http://localhost:8080
+   Your server should be now running on http://localhost:8080
 
 
 ## Built With
