@@ -33,9 +33,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-    Once you have maven and npm installed on your environment, install the project dependencies via:
+Once you have maven and npm installed on your environment, install the project dependencies via:
 
-    #### 1) Using terminal, go into 'react_app' folder and perform these actions:
+1. Using terminal, go into 'react_app' folder and perform these actions:
 
     Installing dependencies:
 
@@ -49,7 +49,7 @@ These instructions will get you a copy of the project up and running on your loc
     npm run start
     ```
 
-    #### 2) Using terminal, go into 'springboot_app' folder and perform these actions:
+2. Using terminal, go into 'springboot_app' folder and perform these actions:
 
     Installing dependencies:
 
