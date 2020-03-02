@@ -33,9 +33,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Once you have maven and npm installed on your environment, install the project dependencies via:
+    Once you have maven and npm installed on your environment, install the project dependencies via:
 
-    #### 1) Using terminal go into 'react_app' folder and perform these actions:
+    #### 1) Using terminal, go into 'react_app' folder and perform these actions:
 
     Installing dependencies:
 
@@ -49,7 +49,7 @@ Once you have maven and npm installed on your environment, install the project d
     npm run start
     ```
 
-    #### 2) Using terminal go into 'springboot_app' folder and perform these actions:
+    #### 2) Using terminal, go into 'springboot_app' folder and perform these actions:
 
     Installing dependencies:
 
@@ -61,8 +61,7 @@ Once you have maven and npm installed on your environment, install the project d
 
 #### 1) Using terminal go into 'react_app' folder and perform these actions to run front-end application:
 
-```
-1) Start App in Dev Environment:
+1. Start App in Dev Environment:
 
 ```
 npm run dev
@@ -71,7 +70,7 @@ npm run dev
 Your application should be now running on http://localhost:9000
 
 
-2) Start App in Prod Environment:
+2. Start App in Prod Environment:
 
 ```
 npm run fireTheProd
@@ -81,9 +80,9 @@ Your application should be now running on http://localhost:9100
 
 #### 2) Using terminal go into 'springboot_app' folder and perform these actions to run backend application:
 
-
 Run the application from the `Application.java` main method directly,
 or from a command line:
+
 ```
 mvn spring-boot:run
 ```
