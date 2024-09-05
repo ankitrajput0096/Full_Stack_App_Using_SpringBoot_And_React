@@ -8,6 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+#### Method 1: Installing individual dependencies
 1. Clone the project to your local environment:
     ```
     git clone https://github.com/ankitrajput0096/Full_Stack_App_Using_SpringBoot_And_React
@@ -31,8 +32,21 @@ These instructions will get you a copy of the project up and running on your loc
     https://www.npmjs.com/get-npm
     ```
 
+#### Method 2: Installing docker 
+1. You need Docker to be installed:
+
+    #### Windows:
+    https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
+    
+    #### Mac:
+    https://download.docker.com/mac/stable/Docker.dmg
+    
+    #### Ubuntu:
+    https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
 ### Installing
 
+#### Method 1
 Once you have maven and npm installed on your environment, install the project dependencies via:
 
 1. Using terminal, go into `react_app` folder and perform these actions:
@@ -57,7 +71,24 @@ Once you have maven and npm installed on your environment, install the project d
     mvn install
     ```
 
+#### Method 2
+Once you have docker installed on your environment, install the project dependencies via:
+
+Build docker Image:
+
+```
+docker-compose build
+```
+
+Start docker:
+
+```
+docker-compose up
+```
+
 ## Running
+
+### Method 1
 
 #### 1) Using terminal, go into `react_app` folder and perform these actions to run front-end application:
 
@@ -76,7 +107,7 @@ Once you have maven and npm installed on your environment, install the project d
    npm run fireTheProd
    ```
 
-   Your application should be now running on http://localhost:9100
+   Your application should be now running on http://localhost:9090
 
 #### 2) Using terminal, go into `springboot_app` folder and perform these actions to run backend application:
 
@@ -89,6 +120,14 @@ Once you have maven and npm installed on your environment, install the project d
 
    Your server should be now running on http://localhost:8080
 
+### Method 2
+
+Start docker:
+```
+docker-compose up
+```
+
+Your application should be now running on http://localhost:8082
 
 ## Built With
 
