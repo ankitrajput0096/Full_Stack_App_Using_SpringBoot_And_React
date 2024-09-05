@@ -6,11 +6,16 @@ class MyComponent extends Component {
   render() {
     return (
     <div>
-      <div className={"intro"}>Hello World</div>
+      <h1>Welcome to Dashboard HomePage</h1>
       <img src={logo} alt="Logo" />
-      <div>Awesome!!!</div>
+      <br></br>
       {/*This is an navigation link to 'aboutUs' component*/}
-      <NavLink to='/about'>Click here to go About us </NavLink>
+      <NavLink to='/about'>
+        <button type="button" class="button">
+          Click here to go Redux State Page 
+        </button>
+      </NavLink>
+    
     </div>
     );
   }

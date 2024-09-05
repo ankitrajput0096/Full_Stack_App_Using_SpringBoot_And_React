@@ -61,15 +61,17 @@ class Contact extends Component {
     if(getData.length > 0) {
       return (
         getData.map((ele) => (
+          <h2>
           <div>
             <p>ID: {ele.id}</p>
             <p>Name: {ele.name}</p>
             <p>description: {ele.description}</p>
           </div>
+          </h2>
         ))
       )
     }
-    return 'No Data';
+    return <h2>No Data in the Beginning</h2>;
   }
 
   handleChange(event) {
@@ -112,12 +114,14 @@ class Contact extends Component {
 
   _renderGetData() {
     return (
-      <div>
+      <div class="tabcontent">
+        <h1> Data from Spring boot Server</h1>
         {this._renderGETdata()}
-        <button type="button" onClick={this._handleGETApiCall}>
+        <br></br>
+        <button type="button" class='button' onClick={this._handleGETApiCall}>
           Get API Data from backend
         </button>
-        <button type="button" onClick={this._handleGETApiCallWithDelay}>
+        <button type="button" class='button' onClick={this._handleGETApiCallWithDelay}>
           Get API Data from backend with Delay
         </button>
       </div>
@@ -126,22 +130,23 @@ class Contact extends Component {
 
   _renderPostData() {
     return (
-      <div>
-        <span> This is to add new Topic entries </span>
+      <div class="tabcontent">
+        <h2> This is to add new Topic entries </h2>
         <br/>
         <label>
-          id:
-          <input type="text" value={this.state.postId} onChange={(e) => {this.handleChange(e)}} name="postId" />
+          <h2>id:</h2>
+          <input class='inputtext' type="text" value={this.state.postId} onChange={(e) => {this.handleChange(e)}} name="postId" />
         </label>
         <label>
-          name:
-          <input type="text" value={this.state.postName} onChange={(e) => {this.handleChange(e)}} name="postName" />
+          <h2>name:</h2>
+          <input class='inputtext'  type="text" value={this.state.postName} onChange={(e) => {this.handleChange(e)}} name="postName" />
         </label>
         <label>
-          description:
-          <input type="text" value={this.state.postDesc} onChange={(e) => {this.handleChange(e)}} name="postDesc" />
+          <h2>description:</h2>
+          <input class='inputtext' type="text" value={this.state.postDesc} onChange={(e) => {this.handleChange(e)}} name="postDesc" />
         </label>
-        <button onClick={(e) => {this.handleSubmit('postAPI')}}> Post method Call</button>
+        <br/>
+        <button class='button' onClick={(e) => {this.handleSubmit('postAPI')}}> Post method Call</button>
         <br/>
       </div>
     );
@@ -149,22 +154,23 @@ class Contact extends Component {
 
   _renderPutData() {
     return (
-      <div>
-        <span> This is to modify the existing topic entries</span>
+      <div class="tabcontent">
+        <h2> This is to modify the existing topic entries</h2>
         <br/> 
         <label>
-          id:
-          <input type="text" value={this.state.putId} onChange={(e) => {this.handleChange(e)}} name="putId" />
+          <h2>id:</h2>
+          <input class='inputtext' type="text" value={this.state.putId} onChange={(e) => {this.handleChange(e)}} name="putId" />
         </label>
         <label>
-          name:
-          <input type="text" value={this.state.putName} onChange={(e) => {this.handleChange(e)}} name="putName" />
+          <h2>name:</h2>
+          <input class='inputtext' type="text" value={this.state.putName} onChange={(e) => {this.handleChange(e)}} name="putName" />
         </label>
         <label>
-          description:
-          <input type="text" value={this.state.putDesc} onChange={(e) => {this.handleChange(e)}} name="putDesc" />
+          <h2>description</h2>
+          <input class='inputtext' type="text" value={this.state.putDesc} onChange={(e) => {this.handleChange(e)}} name="putDesc" />
         </label>
-        <button onClick={(e) => {this.handleSubmit('putAPI')}}> Put method Call</button>
+        <br/>
+        <button class='button' onClick={(e) => {this.handleSubmit('putAPI')}}> Put method Call</button>
         <br/>
       </div>
     );
@@ -172,14 +178,15 @@ class Contact extends Component {
 
   _renderDeleteData() {
     return (
-      <div>
-        <span>This is to delete the topic entry</span>
+      <div class="tabcontent">
+        <h2>This is to delete the topic entry</h2>
         <br/> 
         <label>
-          id:
-          <input type="text" value={this.state.deleteId} onChange={(e) => {this.handleChange(e)}} name="deleteId" />
+          <h2>id:</h2>
+          <input class='inputtext' type="text" value={this.state.deleteId} onChange={(e) => {this.handleChange(e)}} name="deleteId" />
         </label>
-        <button onClick={(e) => {this.handleSubmit('deleteAPI')}}> Delete method Call</button>
+        <br/>
+        <button class='button' onClick={(e) => {this.handleSubmit('deleteAPI')}}> Delete method Call</button>
         <br/>
       </div>
     );
@@ -199,19 +206,29 @@ class Contact extends Component {
     else {                // Displaying value when data is present from API call
       return (
           <div>
-            <h2>Contact</h2>
-            {value}
-            <button type="button" onClick={this._handleIncrement}>
-              Increment
+            <h1>React Redux State Management - In Action !!</h1>
+            <h2> 
+              This counter is controlled by Redux State Management variables.
+            </h2>
+            <h1> 
+              {value}
+            </h1>
+            <br></br>
+            <button type="button" class="button" onClick={this._handleIncrement}>
+              <h2>Increment</h2>
             </button>
-            <button type="button" onClick={this._handleDecrement}>
-              Decrement
+            <button type="button" class="button" onClick={this._handleDecrement}>
+              <h2>Decrement</h2>
             </button>
             {this._renderGetData()}
             {this._renderPostData()}
             {this._renderPutData()}
             {this._renderDeleteData()}
-            <NavLink to='/'>Click here to go HomePage </NavLink>
+            <NavLink to='/'>
+              <button type='button' class='button'>
+                Click here to go HomePage 
+              </button>
+            </NavLink>
           </div>
       );
     }
