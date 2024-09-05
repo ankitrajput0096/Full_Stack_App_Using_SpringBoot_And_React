@@ -129,6 +129,15 @@ docker-compose up
 
 Your application should be now running on http://localhost:8082
 
+## Main Logic of React Redux State machine
+![Screenshot 1](react_app/react_app/appscreenshots/Working_of_react_redux_state.png)
+
+## Screenshots of Simple React App
+![Screenshot 1](react_app/react_app/appscreenshots/Screenshot_1.png)
+![Screenshot 2](react_app/react_app/appscreenshots/Screenshot_2.png)
+![Screenshot 3](react_app/react_app/appscreenshots/Screenshot_3.png)
+![Screenshot 4](react_app/react_app/appscreenshots/Screenshot_4.png)
+
 ## Built With
 
 * [React](https://reactjs.org/) - React
