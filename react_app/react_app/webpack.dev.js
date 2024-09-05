@@ -6,8 +6,10 @@ module.exports = {
   mode: "development",
   output: {
     path:path.resolve(__dirname, "dist"),
+    publicPath: '/'
   },
   devServer: {
+    historyApiFallback: true,
     compress: true,
     port: 9000,
     hot: true

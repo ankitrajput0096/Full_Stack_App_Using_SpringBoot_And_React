@@ -15,7 +15,11 @@ class MyComponent extends Component {
           Click here to go Redux State Page 
         </button>
       </NavLink>
-    
+      <NavLink to='/comtwo'>
+        <button type="button" class="button">
+          Click here to go Component App Two
+        </button>
+      </NavLink>
     </div>
     );
   }
